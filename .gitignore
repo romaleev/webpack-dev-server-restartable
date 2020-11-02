@@ -1,0 +1,10 @@
+*.DS_Store
+*.log
+.idea/*
+.env
+.config
+node_modules
+npm-debug.log*
+dist/*
+.Trash-0/
+.history/

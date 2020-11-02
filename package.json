@@ -1,0 +1,63 @@
+{
+  "name": "webpack-dev-server-restartable",
+  "version": "1.0.0",
+  "description": "Restartable https://github.com/webpack/webpack-dev-server",
+  "main": "lib/Server.js",
+  "bin": {
+    "webpack-dev-server-restartable": "index.js"
+  },
+  "scripts": {
+    "security": "npm audit",
+    "wds": "webpack-dev-server --config test/webpack.config.sample.js | gnomon",
+    "wdsr": "./index.js --restart 'test/server.sample.js test/webpack.config.sample.js' --config ../test/webpack.config.sample.js",
+    "nodemon": "nodemon -q --watch 'test/webpack.config.sample.js' --watch 'test/server.sample.js' --exec 'webpack-dev-server --config test/webpack.config.sample.js' | gnomon",
+    "benchmark-start": "node ./test/benchmark.start.js",
+    "benchmark-restart": "node ./test/benchmark.restart.js",
+    "test": "npm run benchmark-start && npm run benchmark-restart"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romaleev/webpack-dev-server-restartable.git"
+  },
+  "keywords": [
+    "webpack",
+    "dev",
+    "server",
+    "webpack-dev-server",
+    "restartable",
+    "reload",
+    "auto",
+    "restart",
+    "change",
+    "stop",
+    "nodemon"
+  ],
+  "author": "Roman Malieiev <aromaleev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/romaleev/webpack-dev-server-restartable/issues"
+  },
+  "engines": {
+    "node": ">= 6.11.5"
+  },
+  "homepage": "https://github.com/romaleev/webpack-dev-server-restartable#readme",
+  "dependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/register": "^7.9.0",
+    "colors": "^1.4.0",
+    "chokidar": "^3.4.0",
+    "fast-boot": "^1.0.7",
+    "minimist": "^1.2.5"
+  },
+  "devDependencies": {
+    "gnomon": "^1.5.0",
+    "nodemon": "^2.0.4",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "peerDependencies": {
+    "webpack": ">= 4.0.0",
+    "webpack-dev-server": ">= 3.0.0"
+  }
+}
