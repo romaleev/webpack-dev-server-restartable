@@ -47,7 +47,7 @@
     "colors": "^1.4.0",
     "chokidar": "^3.4.0",
     "fast-boot": "^1.0.7",
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.6"
   },
   "devDependencies": {
     "gnomon": "^1.5.0",
